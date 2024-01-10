@@ -29,6 +29,7 @@
 }
 
 .episode h3 {
+    align-items: center;
     display: flex;
     flex: 0 0 50%;
 }
@@ -39,6 +40,8 @@
 
 .episode__number {
     font-size: 10px;
+    margin-right: 5px;
+    min-width: 20px;
 }
 
 @media all and (min-width: 768px) {
