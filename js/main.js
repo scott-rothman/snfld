@@ -126,25 +126,20 @@ function buildAndReturnMentionDOM(mentionData) {
   return mentionsDom;
 }
 
-function checkAndAddToGlobalMentions(mentionID) {
-  const globalMention = MENTIONS.querySelector(`[data-id='${mentionID}']`);
+function checkAndAddToGlobalMentions(mention) {
+  const globalMention = MENTIONS.querySelector(`[data-id='${mention}']`);
   if (!globalMention) {
     const globalMentionDom = document.createElement('div');
     const title = document.createElement('h2');
     const description = document.createElement('p');
     
-    for (const mention of showData.mentions) {
-      if (mention.id === mentionID) {
-        title.innerText = mention.shorthand;
-        description.innerText = mention.description;
-      }
-    }
-    
+    title.innerText = showData.mentions[mention].shorthand;
+    description.innerText = showData.mentions[mention].description;
     
     globalMentionDom.appendChild(title);
     globalMentionDom.appendChild(description);
     globalMentionDom.classList.add(`global-mention`);
-    globalMentionDom.dataset.id = mentionID;
+    globalMentionDom.dataset.id = mention;
     
     MENTIONS.appendChild(globalMentionDom);
   }

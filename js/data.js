@@ -127,7 +127,7 @@ export class DataManager {
     
     gatherMentionsData() {
         return new Promise((resolve, reject) => {
-            const mentionsRef = database.ref('mentions/').orderByChild('slug');
+            const mentionsRef = database.ref('mentions/');
             mentionsRef.once('value', (snapshot) => {
                 resolve(snapshot.val());
             });
@@ -135,13 +135,13 @@ export class DataManager {
     }
 
     populateMentionsSelectorWithNew() {
-        const keys = Object.keys(this.data.mentions).sort((a,b)=> this.data.mentions[a].slug > this.data.mentions[b].slug);
+        const mentionKeys = Object.keys(this.data.mentions).sort((a,b)=> this.data.mentions[a].slug > this.data.mentions[b].slug);
 
-        for (const key of keys) {
-            const optionCheck = this.mentionSelector.querySelector(`option[value="${this.data.mentions[key].slug}"]`);
+        for (const key of mentionKeys) {
+            const optionCheck = this.mentionSelector.querySelector(`option[value="${key}"]`);
             if (!optionCheck) {
                 const newOption = document.createElement('option');
-                newOption.value = this.data.mentions[key].slug;
+                newOption.value = this.data.mentions[key].id;
                 newOption.innerText = this.data.mentions[key].slug;
                 this.mentionSelector.appendChild(newOption);
             }
@@ -286,7 +286,8 @@ export class DataManager {
 
     async addNewMentionToDatabase(mentionData) {
         await this.bootstrapData();
-        const mentionsRef = database.push(`mentions/`);
+        const ID = this.getNextMentionID();
+        const mentionsRef = database.ref(`mentions/${ID}/`);
         
         mentionsRef.set({
             "id": ID,
