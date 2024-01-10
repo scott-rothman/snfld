@@ -1,0 +1,13 @@
+.season {
+    border: solid var(--secondary) 1px;
+    color: #fff;
+    flex: 0 0 calc(100% - 5px);
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.season__episodes {
+    display: flex;
+    flex-wrap: wrap;
+}

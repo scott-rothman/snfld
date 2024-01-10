@@ -1,0 +1,18 @@
+.global-mention {
+    background: #000;
+    bottom: 0;
+    border: solid #fff 1px;
+    border-bottom: 0;
+    color: #fff;
+    display: none;
+    left: 50%;
+    min-height: 100px;
+    padding: 25px;
+    position: fixed;
+    transform: translate(-50%, 0);
+    width: 50%;
+}
+
+.global-mention.active {
+    display: block;
+}

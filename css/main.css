@@ -1,0 +1,38 @@
+@import url(vars.css);
+@import url(reset.css);
+@import url(type.css);
+
+@import url(header.css);
+@import url(season.css);
+@import url(episode.css);
+@import url(controls.css);
+@import url(forms.css);
+@import url(mentions-map.css);
+@import url(global-mentions.css);
+
+body {
+    background-color: var(--primary);
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.map {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 55px);
+    justify-content: space-evenly;
+    left: 0;
+    margin-bottom: 50px;
+    max-height: 100%;
+}
+
+.hide {
+    display: none;
+}

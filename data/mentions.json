@@ -1,0 +1,32 @@
+{
+    "0000": {
+        "id": "0000",
+        "slug": "shirt-button-position",
+        "shorthand": "Shirt button position",
+        "description": "Jerry critiques the position of the second button on George's shirt"
+    },
+    "0001": {
+        "id": "0001",
+        "slug": "caffeine-avoidance",
+        "shorthand": "Caffeine avoidance",
+        "description": "Originally it is George who avoids caffeine, but later retconned to Jerry"
+    },
+    "0002": {
+        "id": "0002",
+        "slug": "art-vandalay",
+        "shorthand": "Art Vandalay",
+        "description": "A pseduonym often adopted by George"
+    },
+    "0003": {
+        "id": "0003",
+        "slug": "architect",
+        "shorthand": "Architect",
+        "description": "George has always wanted to pretend to be an architect."
+    },
+    "0004": {
+        "id": "0004",
+        "slug": "importer-exporter",
+        "shorthand": "Importer Exporter",
+        "description": "An oft discussed profession"
+    }
+}

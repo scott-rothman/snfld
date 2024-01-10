@@ -1,0 +1,8 @@
+.header {
+    color: #fff;
+    padding: 5px;
+}
+
+.header__subtitle {
+    font-style: italic;
+}

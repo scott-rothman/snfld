@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">The Map of Seinfeld</h1>
+            <p class="header__subtitle">A visual mapping of self referential mentions in the classic sitcom</p>
+        </header>
+        <div class="map"></div>
+        <div class="mentions"></div>
+        <div class="controls">
+            <button class="controls__add">+</button>
+        </div>
+        <div class="forms">
+            <div class="form__wrapper">
+                <div class="form__controls">
+                    <button class="form__close-button">x</button>
+                    <button class="form__mentions-button form__toggle">mentions</button>
+                    <button class="form__episodes-button form__toggle">episodes</button>
+                </div>
+                <form class="form__body form__body--mentions" action="">
+                    <div class="form__body-wrapper">
+                        <div class="form__select-wrapper form__mentions-list-wrapper">
+                            <select class="form__mentions-list">
+                                <option value="NEW">New mention</option>
+                            </select>
+                        </div>
+                        <div class="form__label">
+                            <label for="slug">slug</label>
+                        </div>
+                        <div class="form__input form__input--new">
+                            <input type="text" id="slug" name="slug">
+                        </div>
+                        <div class="form__label">
+                            <label for="shorthand">shorthand</label>
+                        </div>
+                        <div class="form__input form__input--new">
+                            <input type="text" id="shorthand" name="shorthand">
+                        </div>
+                        <div class="form__label">
+                            <label for="description">description</label>
+                        </div>
+                        <div class="form__input form__input--new">
+                            <input type="text" id="description" name="description">
+                        </div>
+
+                        <div class="form__seasons-list-wrapper form__input--existing">
+                            <select class="form__seasons-list form__seasons-list--mentions">
+                                <option value="1">Season 1</option>
+                                <option value="2">Season 2</option>
+                                <option value="3">Season 3</option>
+                                <option value="4">Season 4</option>
+                                <option value="5">Season 5</option>
+                                <option value="6">Season 6</option>
+                                <option value="7">Season 7</option>
+                                <option value="8">Season 8</option>
+                                <option value="9">Season 9</option>
+                            </select>
+                        </div>
+
+                        <div class="form__episodes-list-wrapper form__select-wrapper form__input--existing">
+                            <select class="form__episodes-list">
+                            </select>
+                        </div>
+                        
+                        <div class="form__meta">
+                            <div class="form__mention-status"></div>
+                            <div class="form__submit">
+                                <button>Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="form__body form__body--episodes" action="">
+                    <div class="form__body-wrapper">
+                        <div class="form__seasons-list-wrapper">
+                            <select name="season" class="form__seasons-list form__seasons-list--episodes">
+                                <option value="1">Season 1</option>
+                                <option value="2">Season 2</option>
+                                <option value="3">Season 3</option>
+                                <option value="4">Season 4</option>
+                                <option value="5">Season 5</option>
+                                <option value="6">Season 6</option>
+                                <option value="7">Season 7</option>
+                                <option value="8">Season 8</option>
+                                <option value="9">Season 9</option>
+                            </select>
+                        </div>
+                        <div class="form__label">
+                            <label class="form__label" for="episode">episode</label>
+                        </div>
+                        <div class="form__input">
+                            <input type="text" id="episode" name="episode">
+                        </div>
+                        <div class="form__label">
+                            <label class="form__label" for="title">title</label>
+                        </div>
+                        <div class="form__input">
+                            <input type="text" id="title" name="title">
+                        </div>
+                        <div class="form__meta">
+                            <div class="form__episode-status"></div>
+                            <div class="form__submit">
+                                <button>Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDoBgMr30Ol23ucM1S2nGah3kClQWsC0uA",
+            authDomain: "snfld-b5e3b.firebaseapp.com",
+            databaseURL: "https://snfld-b5e3b-default-rtdb.firebaseio.com",
+            projectId: "snfld-b5e3b",
+            storageBucket: "snfld-b5e3b.appspot.com",
+            messagingSenderId: "106427534205",
+            appId: "1:106427534205:web:743549b90dd4554fd6da14"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="./js/main.js" type="module"></script>
+    </body>
+</html>

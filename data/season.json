@@ -1,0 +1,102 @@
+{
+    "1": {
+        "season": 1,
+        "episodes": 
+        {
+            "1": {
+                "season": 1,
+                "episode": 1,
+                "title": "The Seinfeld Chronicles",
+                "mentions": ["0000", "0001"]
+            }, 
+            "2": {
+                "season": 1,
+                "episode": 2, 
+                "title": "The Stake Out",
+                "mentions": ["0002", "0003", "0004"]
+            }
+        }
+    }, 
+    "2": {
+        "season": 2,
+        "episodes": {
+            "1": {
+                "season": 2,
+                "episode": 1,
+                "title": "The Ex-Girlfriend"
+            }
+        }
+    }, 
+    "3": {
+        "season": 3,
+        "episodes": {
+            "1": {
+                "season": 3,
+                "episode": 4,
+                "title": "The Dog",
+                "mentions": ["0001"]
+            }
+        }
+    }, 
+    "4": {
+        "season": 4,
+        "episodes": {
+            "1": {
+                "season": 4,
+                "episode": 1,
+                "title": "Lorem Ipsum"
+            }
+        }
+    }, 
+    "5": {
+        "season": 5,
+        "episodes": {
+            "1": {
+                "season": 7,
+                "episode": 1,
+                "title": "Lorem Ipsum"
+            }
+        }
+    }, 
+    "6": {
+        "season": 6,
+        "episodes": {
+            "1": {
+                "season": 7,
+                "episode": 1,
+                "title": "Lorem Ipsum"
+            }
+        }
+    },
+    "7": {
+        "season": 7,
+        "episodes": {
+            "1": {
+                "season": 7,
+                "episode": 1,
+                "title": "Lorem Ipsum"
+            }
+        }
+    }, 
+    "8": {
+        "season": 8,
+        "episodes": {
+            "1": {
+                "season": 7,
+                "episode": 1,
+                "title": "Lorem Ipsum"
+            }
+        }
+    }, 
+    "9": {
+        "season": 9,
+        "episodes": {
+            "24": {
+                "season": 9,
+                "episode": 24,
+                "title": "The Finale Pt. 2",
+                "mentions": ["0000"]
+            }
+        }
+    }
+}

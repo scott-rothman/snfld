@@ -1,0 +1,52 @@
+
+.episode-mention__wrapper {
+    display: flex;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    margin: 2px 0;
+}
+
+.episode-mention {
+    align-items: center;;
+    border: solid var(--secondary) 1px;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 10px;
+    font-size: 8px;
+    height: 10px;
+    justify-content: center;
+    margin: 0 1px 1px;
+}
+
+.episode-mention.active {
+    border: solid var(--tertiary) 1px;
+}
+
+.episode {
+    display: flex;
+    flex: 0 0 25%;
+    padding: 0 5px;
+}
+
+.episode h3 {
+    display: flex;
+    flex: 0 0 50%;
+}
+
+.episode__name {
+    display: none;
+}
+
+.episode__number {
+    font-size: 10px;
+}
+
+@media all and (min-width: 768px) {
+    .episode-mention__wrapper {
+        margin: 5px 0;
+    }
+
+    .episode__name {
+        display: block;
+    }
+}
