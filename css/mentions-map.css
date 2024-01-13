@@ -5,7 +5,9 @@
     flex: 0 0 100%;
 }
 
-.mention:hover {
+.mention:hover,
+.mention:active,
+.mention:focus {
     color: var(--tertiary);
 }
 

@@ -8,6 +8,7 @@
 
 .episode-mention {
     align-items: center;;
+    background-color: var(--secondary);
     border: solid var(--secondary) 1px;
     cursor: pointer;
     display: flex;
@@ -16,9 +17,11 @@
     height: 10px;
     justify-content: center;
     margin: 0 1px 1px;
+    transition: background-color .1s linear, border .1s linear;
 }
 
 .episode-mention.active {
+    background-color: var(--tertiary);
     border: solid var(--tertiary) 1px;
 }
 
@@ -28,10 +31,20 @@
     padding: 0 5px;
 }
 
+h2 {
+    flex: 0 0 25%;
+    padding: 0;
+    margin: 0;
+}
+
 .episode h3 {
     align-items: center;
     display: flex;
-    flex: 0 0 50%;
+    flex: 0 0 20%;
+
+    @media all and (min-width: 768px) {
+        flex: 0 0 50%;
+    }
 }
 
 .episode__name {

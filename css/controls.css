@@ -2,14 +2,14 @@
     align-items: center;
     background-color: #000;
     border-bottom: solid 1px #fff;
-    border-left: solid 1px #fff;
-    top: 0;
+    border-left: solid 1px #fff;  
     display: flex;
     height: 75px;
     justify-content: center;
     right: 0;
     position: fixed;
     width: 75px;
+    top: 0;
 }
 
 .controls__add {

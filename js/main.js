@@ -27,8 +27,8 @@ async function buildRelationshipTree() {
       
       const seasonEpisodes = document.createElement('div')
       seasonEpisodes.classList.add('season__episodes');
-      seasonDOM.appendChild(seasonTitle);
-      
+      //seasonDOM.appendChild(seasonTitle);
+      seasonEpisodes.appendChild(seasonTitle);
       if (season.episodes) {
         const episodeKeys = Object.keys(season.episodes);
         for (const key of episodeKeys) {
